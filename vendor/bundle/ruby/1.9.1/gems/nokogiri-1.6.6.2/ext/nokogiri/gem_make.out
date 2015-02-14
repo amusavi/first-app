@@ -1,0 +1,136 @@
+/usr/bin/ruby1.9.1 extconf.rb 
+checking if the C compiler accepts ... yes
+Building nokogiri using packaged libraries.
+checking for gzdopen() in -lz... yes
+checking for iconv... yes
+************************************************************************
+IMPORTANT NOTICE:
+
+Building Nokogiri with a packaged version of libxml2-2.9.2
+with the following patches applied:
+	- 0001-Revert-Missing-initialization-for-the-catalog-module.patch
+	- 0002-Fix-missing-entities-after-CVE-2014-3660-fix.patch
+
+Team Nokogiri will keep on doing their best to provide security
+updates in a timely manner, but if this is a concern for you and want
+to use the system library instead; abort this installation process and
+reinstall nokogiri as follows:
+
+    gem install nokogiri -- --use-system-libraries
+        [--with-xml2-config=/path/to/xml2-config]
+        [--with-xslt-config=/path/to/xslt-config]
+
+If you are using Bundler, tell it to use the option:
+
+    bundle config build.nokogiri --use-system-libraries
+    bundle install
+
+Note, however, that nokogiri is not fully compatible with arbitrary
+versions of libxml2 provided by OS/package vendors.
+************************************************************************
+Extracting libxml2-2.9.2.tar.gz into tmp/i486-pc-linux-gnu/ports/libxml2/2.9.2... OK
+Running patch with /media/Data/second_sem/cloud/projects/first-app/vendor/bundle/ruby/1.9.1/gems/nokogiri-1.6.6.2/ports/patches/libxml2/0001-Revert-Missing-initialization-for-the-catalog-module.patch...
+Running 'patch' for libxml2 2.9.2... OK
+Running patch with /media/Data/second_sem/cloud/projects/first-app/vendor/bundle/ruby/1.9.1/gems/nokogiri-1.6.6.2/ports/patches/libxml2/0002-Fix-missing-entities-after-CVE-2014-3660-fix.patch...
+Running 'patch' for libxml2 2.9.2... OK
+Running 'configure' for libxml2 2.9.2... OK
+Running 'compile' for libxml2 2.9.2... OK
+Running 'install' for libxml2 2.9.2... OK
+Activating libxml2 2.9.2 (from /media/Data/second_sem/cloud/projects/first-app/vendor/bundle/ruby/1.9.1/gems/nokogiri-1.6.6.2/ports/i486-pc-linux-gnu/libxml2/2.9.2)...
+************************************************************************
+IMPORTANT NOTICE:
+
+Building Nokogiri with a packaged version of libxslt-1.1.28
+with the following patches applied:
+	- 0001-Adding-doc-update-related-to-1.1.28.patch
+	- 0002-Fix-a-couple-of-places-where-f-printf-parameters-wer.patch
+	- 0003-Initialize-pseudo-random-number-generator-with-curre.patch
+	- 0004-EXSLT-function-str-replace-is-broken-as-is.patch
+	- 0006-Fix-str-padding-to-work-with-UTF-8-strings.patch
+	- 0007-Separate-function-for-predicate-matching-in-patterns.patch
+	- 0008-Fix-direct-pattern-matching.patch
+	- 0009-Fix-certain-patterns-with-predicates.patch
+	- 0010-Fix-handling-of-UTF-8-strings-in-EXSLT-crypto-module.patch
+	- 0013-Memory-leak-in-xsltCompileIdKeyPattern-error-path.patch
+	- 0014-Fix-for-bug-436589.patch
+	- 0015-Fix-mkdir-for-mingw.patch
+
+Team Nokogiri will keep on doing their best to provide security
+updates in a timely manner, but if this is a concern for you and want
+to use the system library instead; abort this installation process and
+reinstall nokogiri as follows:
+
+    gem install nokogiri -- --use-system-libraries
+        [--with-xml2-config=/path/to/xml2-config]
+        [--with-xslt-config=/path/to/xslt-config]
+
+If you are using Bundler, tell it to use the option:
+
+    bundle config build.nokogiri --use-system-libraries
+    bundle install
+************************************************************************
+Extracting libxslt-1.1.28.tar.gz into tmp/i486-pc-linux-gnu/ports/libxslt/1.1.28... OK
+Running patch with /media/Data/second_sem/cloud/projects/first-app/vendor/bundle/ruby/1.9.1/gems/nokogiri-1.6.6.2/ports/patches/libxslt/0001-Adding-doc-update-related-to-1.1.28.patch...
+Running 'patch' for libxslt 1.1.28... OK
+Running patch with /media/Data/second_sem/cloud/projects/first-app/vendor/bundle/ruby/1.9.1/gems/nokogiri-1.6.6.2/ports/patches/libxslt/0002-Fix-a-couple-of-places-where-f-printf-parameters-wer.patch...
+Running 'patch' for libxslt 1.1.28... OK
+Running patch with /media/Data/second_sem/cloud/projects/first-app/vendor/bundle/ruby/1.9.1/gems/nokogiri-1.6.6.2/ports/patches/libxslt/0003-Initialize-pseudo-random-number-generator-with-curre.patch...
+Running 'patch' for libxslt 1.1.28... OK
+Running patch with /media/Data/second_sem/cloud/projects/first-app/vendor/bundle/ruby/1.9.1/gems/nokogiri-1.6.6.2/ports/patches/libxslt/0004-EXSLT-function-str-replace-is-broken-as-is.patch...
+Running 'patch' for libxslt 1.1.28... OK
+Running patch with /media/Data/second_sem/cloud/projects/first-app/vendor/bundle/ruby/1.9.1/gems/nokogiri-1.6.6.2/ports/patches/libxslt/0006-Fix-str-padding-to-work-with-UTF-8-strings.patch...
+Running 'patch' for libxslt 1.1.28... OK
+Running patch with /media/Data/second_sem/cloud/projects/first-app/vendor/bundle/ruby/1.9.1/gems/nokogiri-1.6.6.2/ports/patches/libxslt/0007-Separate-function-for-predicate-matching-in-patterns.patch...
+Running 'patch' for libxslt 1.1.28... OK
+Running patch with /media/Data/second_sem/cloud/projects/first-app/vendor/bundle/ruby/1.9.1/gems/nokogiri-1.6.6.2/ports/patches/libxslt/0008-Fix-direct-pattern-matching.patch...
+Running 'patch' for libxslt 1.1.28... OK
+Running patch with /media/Data/second_sem/cloud/projects/first-app/vendor/bundle/ruby/1.9.1/gems/nokogiri-1.6.6.2/ports/patches/libxslt/0009-Fix-certain-patterns-with-predicates.patch...
+Running 'patch' for libxslt 1.1.28... OK
+Running patch with /media/Data/second_sem/cloud/projects/first-app/vendor/bundle/ruby/1.9.1/gems/nokogiri-1.6.6.2/ports/patches/libxslt/0010-Fix-handling-of-UTF-8-strings-in-EXSLT-crypto-module.patch...
+Running 'patch' for libxslt 1.1.28... OK
+Running patch with /media/Data/second_sem/cloud/projects/first-app/vendor/bundle/ruby/1.9.1/gems/nokogiri-1.6.6.2/ports/patches/libxslt/0013-Memory-leak-in-xsltCompileIdKeyPattern-error-path.patch...
+Running 'patch' for libxslt 1.1.28... OK
+Running patch with /media/Data/second_sem/cloud/projects/first-app/vendor/bundle/ruby/1.9.1/gems/nokogiri-1.6.6.2/ports/patches/libxslt/0014-Fix-for-bug-436589.patch...
+Running 'patch' for libxslt 1.1.28... OK
+Running patch with /media/Data/second_sem/cloud/projects/first-app/vendor/bundle/ruby/1.9.1/gems/nokogiri-1.6.6.2/ports/patches/libxslt/0015-Fix-mkdir-for-mingw.patch...
+Running 'patch' for libxslt 1.1.28... OK
+Running 'configure' for libxslt 1.1.28... ERROR, review '/media/Data/second_sem/cloud/projects/first-app/vendor/bundle/ruby/1.9.1/gems/nokogiri-1.6.6.2/ext/nokogiri/tmp/i486-pc-linux-gnu/ports/libxslt/1.1.28/configure.log' to see what happened.
+*** extconf.rb failed ***
+Could not create Makefile due to some reason, probably lack of
+necessary libraries and/or headers.  Check the mkmf.log file for more
+details.  You may need configuration options.
+
+Provided configuration options:
+	--with-opt-dir
+	--without-opt-dir
+	--with-opt-include
+	--without-opt-include=${opt-dir}/include
+	--with-opt-lib
+	--without-opt-lib=${opt-dir}/lib
+	--with-make-prog
+	--without-make-prog
+	--srcdir=.
+	--curdir
+	--ruby=/usr/bin/ruby1.9.1
+	--help
+	--clean
+	--use-system-libraries
+	--enable-static
+	--disable-static
+	--with-zlib-dir
+	--without-zlib-dir
+	--with-zlib-include
+	--without-zlib-include=${zlib-dir}/include
+	--with-zlib-lib
+	--without-zlib-lib=${zlib-dir}/lib
+	--enable-cross-build
+	--disable-cross-build
+/media/Data/second_sem/cloud/projects/first-app/vendor/bundle/ruby/1.9.1/gems/mini_portile-0.6.2/lib/mini_portile.rb:279:in `block in execute': Failed to complete configure task (RuntimeError)
+	from /media/Data/second_sem/cloud/projects/first-app/vendor/bundle/ruby/1.9.1/gems/mini_portile-0.6.2/lib/mini_portile.rb:271:in `chdir'
+	from /media/Data/second_sem/cloud/projects/first-app/vendor/bundle/ruby/1.9.1/gems/mini_portile-0.6.2/lib/mini_portile.rb:271:in `execute'
+	from /media/Data/second_sem/cloud/projects/first-app/vendor/bundle/ruby/1.9.1/gems/mini_portile-0.6.2/lib/mini_portile.rb:66:in `configure'
+	from /media/Data/second_sem/cloud/projects/first-app/vendor/bundle/ruby/1.9.1/gems/mini_portile-0.6.2/lib/mini_portile.rb:109:in `cook'
+	from extconf.rb:278:in `block in process_recipe'
+	from extconf.rb:177:in `tap'
+	from extconf.rb:177:in `process_recipe'
+	from extconf.rb:487:in `<main>'

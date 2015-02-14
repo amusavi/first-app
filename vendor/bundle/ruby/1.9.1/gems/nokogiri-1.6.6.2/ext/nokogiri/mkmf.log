@@ -1,0 +1,54 @@
+"gcc -o conftest -I/usr/include/ruby-1.9.1/i486-linux -I/usr/include/ruby-1.9.1/ruby/backward -I/usr/include/ruby-1.9.1 -I. -D_FORTIFY_SOURCE=2 -D_FILE_OFFSET_BITS=64 -D_FORTIFY_SOURCE=2 -g -O2 -fstack-protector --param=ssp-buffer-size=4 -Wformat -Werror=format-security -Wall -fno-strict-aliasing -fPIC  conftest.c  -L. -L/usr/lib -L. -Wl,-z,relro -rdynamic -Wl,-export-dynamic     -lruby-1.9.1  -lpthread -lrt -ldl -lcrypt -lm   -lc "
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: int main() {return 0;}
+/* end */
+
+"gcc -I/usr/include/ruby-1.9.1/i486-linux -I/usr/include/ruby-1.9.1/ruby/backward -I/usr/include/ruby-1.9.1 -I. -D_FORTIFY_SOURCE=2 -D_FILE_OFFSET_BITS=64 -D_FORTIFY_SOURCE=2 -g -O2 -fstack-protector --param=ssp-buffer-size=4 -Wformat -Werror=format-security -Wall -fno-strict-aliasing -fPIC    -Werror -c conftest.c"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: int main() {return 0;}
+/* end */
+
+have_library: checking for gzdopen() in -lz... -------------------- yes
+
+"gcc -o conftest -I/usr/include/ruby-1.9.1/i486-linux -I/usr/include/ruby-1.9.1/ruby/backward -I/usr/include/ruby-1.9.1 -I. -D_FORTIFY_SOURCE=2 -D_FILE_OFFSET_BITS=64 -D_FORTIFY_SOURCE=2 -g -O2 -fstack-protector --param=ssp-buffer-size=4 -Wformat -Werror=format-security -Wall -fno-strict-aliasing -fPIC  -g -DXP_UNIX -Wall -Wcast-qual -Wwrite-strings -Wconversion -Wmissing-noreturn -Winline conftest.c  -L. -L/usr/lib -L. -Wl,-z,relro -rdynamic -Wl,-export-dynamic     -lruby-1.9.1 -lz  -lpthread -lrt -ldl -lcrypt -lm   -lc "
+conftest.c: In function ‘t’:
+conftest.c:7:28: warning: variable ‘p’ set but not used [-Wunused-but-set-variable]
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <zlib.h>
+4: 
+5: /*top*/
+6: int main() {return 0;}
+7: int t() { void ((*volatile p)()); p = (void ((*)()))gzdopen; return 0; }
+/* end */
+
+--------------------
+
+have_iconv?: checking for iconv... -------------------- yes
+
+"gcc -o conftest -I/usr/include/ruby-1.9.1/i486-linux -I/usr/include/ruby-1.9.1/ruby/backward -I/usr/include/ruby-1.9.1 -I. -D_FORTIFY_SOURCE=2 -D_FILE_OFFSET_BITS=64 -D_FORTIFY_SOURCE=2 -g -O2 -fstack-protector --param=ssp-buffer-size=4 -Wformat -Werror=format-security -Wall -fno-strict-aliasing -fPIC  -g -DXP_UNIX -Wall -Wcast-qual -Wwrite-strings -Wconversion -Wmissing-noreturn -Winline conftest.c  -L. -L/usr/lib -L. -Wl,-z,relro -rdynamic -Wl,-export-dynamic     -lruby-1.9.1  -lpthread -lrt -ldl -lcrypt -lm   -lc "
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: #include <stdlib.h>
+ 4: #include <iconv.h>
+ 5: 
+ 6: int main(void)
+ 7: {
+ 8:     iconv_t cd = iconv_open("", "");
+ 9:     iconv(cd, NULL, NULL, NULL, NULL);
+10:     return EXIT_SUCCESS;
+11: }
+/* end */
+
+--------------------
+
